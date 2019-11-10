@@ -18,15 +18,12 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.zip.Inflater;
 
-public class MainActivity extends AppCompatActivity {//implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity {
 
     static final int ADD_NEW_PART_REQ_ID = 200;
-    //private static final Object NotePad = ;
 
     ArrayList<WorkOutPartBase> parts = new ArrayList<>();
     ListView listView = null;
-
-    //TextView txt = findViewById(R.id.no_parts_added_text);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +31,6 @@ public class MainActivity extends AppCompatActivity {//implements View.OnClickLi
         setContentView(R.layout.activity_main);
 
         listView = findViewById(R.id.workOutList);
-        //ArrayList<WorkOutPartBase> parts = new ArrayList<>();
 
         Toolbar myToolbar = findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
@@ -70,7 +66,6 @@ public class MainActivity extends AppCompatActivity {//implements View.OnClickLi
         if (item.getItemId() == R.id.new_menu_item) {
             Intent intent = new Intent(this, new_part.class);
             startActivityForResult(intent, ADD_NEW_PART_REQ_ID);
-            //startActivity(intent);
         }
 
         else if (item.getItemId() == R.id.clear_parts) {
@@ -123,16 +118,11 @@ public class MainActivity extends AppCompatActivity {//implements View.OnClickLi
                         onResume();
                         //adapter.notifyDataSetChanged();
                         dialog.dismiss();
-
                     }
-
                 })
-
                 .setNegativeButton("cancel", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-
                         dialog.dismiss();
-
                     }
                 })
                 .create();
