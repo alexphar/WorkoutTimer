@@ -33,7 +33,7 @@ public class run_program_timer extends AppCompatActivity {
         new CountDownTimer(parts.get(i).getWorkOutTime()*1000 + 1000, 1000)
         {
             public void onTick(long millisUntilFinished) {
-                text.setText(parts.get(i).getWorkOutName()); //+ millisUntilFinished / 1000);
+                text.setText(parts.get(i).getWorkOutName()); 
                 textSeconds.setText("" + millisUntilFinished / 1000);
             }
 
