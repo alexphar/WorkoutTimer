@@ -15,9 +15,8 @@ import android.widget.Toast;
 
 import static android.content.Intent.EXTRA_TEXT;
 
-public class new_part extends AppCompatActivity  {//implements View.OnClickListener {
+public class new_part extends AppCompatActivity  {
 
-    //EditText editor = null;
     private RadioButton radioButtonWorkOut;
     private RadioButton radioButtonPause;
     int id = 0;
